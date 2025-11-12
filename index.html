@@ -100,10 +100,11 @@
                         About Me
                     </h2>
                     <p class="section-subtitle">
-                        A pragmatic builder and creative 'tool smith' who creates efficient, time-saving solutions. 
-                        Hands-on experience in workflow automation (n8n), IoT prototyping (ESP32), 
-                        and full-stack MVP development. I use generative AI (Gemini, Claude, Cursor) 
-                        as a daily driver to accelerate coding and automate data analysis.
+                        A multi-disciplinary developer combining technical execution with creative production. 
+                        I build full-stack applications, automate workflows with N8N, and prototype hardware solutions 
+                        with ESP32. My background in videography and design enables 
+                        me to deliver complete solutions - from concept and development to visual communication. 
+                        AI tools accelerate every stage of my process.
                     </p>
                 </div>
                 <div>
@@ -111,17 +112,95 @@
                         Key Skills
                     </h3>
                     <div class="skills-container">
-                        <span class="badge-primary">Web Design</span>
+                        <span class="badge-primary">JavaScript</span>
                         <span class="badge-primary">Web Development</span>
                         <span class="badge-primary">N8N</span>
                         <span class="badge-primary">Workflow Automation</span>
-                        <span class="badge-primary">JavaScript</span>
-                        <span class="badge-primary">Hosting</span>
+                        <span class="badge-primary">API Integration</span>
+                        <span class="badge-primary">ESP32 Development</span>
+                        <span class="badge-primary">Prompt Engineering</span>
+                        <span class="badge-primary">Docker</span>
                         <span class="badge-secondary">Video Editing</span>
-                        <span class="badge-secondary">Videography</span>
-                        <span class="badge-secondary">API Integration</span>
-                        <span class="badge-secondary">Prompt Engineering</span>
-                        <span class="badge-secondary">ESP32 Development</span>
+                        <span class="badge-secondary">GitHub</span>
+                    </div>
+                    
+                    <!-- Expandable All Skills Section -->
+                    <div class="mt-8">
+                        <button id="toggle-all-skills" class="toggle-skills-btn" aria-expanded="false" aria-controls="all-skills-section">
+                            <span>View All Skills</span>
+                            <svg class="toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        
+                        <div id="all-skills-section" class="all-skills-section hidden">
+                            <!-- Development & Automation -->
+                            <div class="skill-category">
+                                <h4 class="skill-category-title">Development & Automation</h4>
+                                <div class="skills-container">
+                                    <span class="badge-secondary">JavaScript</span>
+                                    <span class="badge-secondary">N8N</span>
+                                    <span class="badge-secondary">Workflow Automation</span>
+                                    <span class="badge-secondary">API Integration</span>
+                                    <span class="badge-secondary">GitHub</span>
+                                    <span class="badge-secondary">Vercel</span>
+                                    <span class="badge-secondary">Hosting</span>
+                                    <span class="badge-secondary">Docker</span>
+                                    <span class="badge-secondary">Linux</span>
+                                    <span class="badge-secondary">Servers</span>
+                                    <span class="badge-secondary">ESP32 Development</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Design & Creative -->
+                            <div class="skill-category">
+                                <h4 class="skill-category-title">Design & Creative</h4>
+                                <div class="skills-container">
+                                    <span class="badge-secondary">Photoshop</span>
+                                    <span class="badge-secondary">Illustrator</span>
+                                    <span class="badge-secondary">Figma</span>
+                                    <span class="badge-secondary">Blender</span>
+                                    <span class="badge-secondary">Web Design</span>
+                                    <span class="badge-secondary">Graphic Design</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Video Production -->
+                            <div class="skill-category">
+                                <h4 class="skill-category-title">Video Production</h4>
+                                <div class="skills-container">
+                                    <span class="badge-secondary">Videography</span>
+                                    <span class="badge-secondary">Video Editing</span>
+                                    <span class="badge-secondary">Premiere Pro</span>
+                                    <span class="badge-secondary">After Effects</span>
+                                </div>
+                            </div>
+                            
+                            <!-- AI & Tools -->
+                            <div class="skill-category">
+                                <h4 class="skill-category-title">AI & Tools</h4>
+                                <div class="skills-container">
+                                    <span class="badge-secondary">Cursor</span>
+                                    <span class="badge-secondary">Claude Code</span>
+                                    <span class="badge-secondary">Gemini CLI</span>
+                                    <span class="badge-secondary">LLM API</span>
+                                    <span class="badge-secondary">Whisper</span>
+                                    <span class="badge-secondary">Prompt Engineering</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Productivity & Collaboration -->
+                            <div class="skill-category">
+                                <h4 class="skill-category-title">Productivity & Collaboration</h4>
+                                <div class="skills-container">
+                                    <span class="badge-secondary">Notion</span>
+                                    <span class="badge-secondary">Google Workspace</span>
+                                    <span class="badge-secondary">Jira</span>
+                                    <span class="badge-secondary">Trello</span>
+                                    <span class="badge-secondary">Microsoft365</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -192,8 +271,9 @@
                             <p class="project-description">A solution for high-volume content analysis using LLMs for time-saving automation.</p>
                             <div class="project-badges">
                                 <span class="badge-small">AI/LLM</span>
-                                <span class="badge-small">Whisper</span>
+                                <span class="badge-small">Whisper Transcription</span>
                                 <span class="badge-small">Workflow</span>
+                                <span class="badge-small">Video Production</span>
                             </div>
                             <button data-project-id="2" class="open-modal-btn btn-primary">
                                 View Details
@@ -382,6 +462,7 @@
         <img id="lightbox-image" src="" alt="Zoomed image" class="max-w-full max-h-full object-contain rounded-lg">
     </div>
 
+    <script src="projects-data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

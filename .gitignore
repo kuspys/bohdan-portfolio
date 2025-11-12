@@ -31,3 +31,5 @@ build/
 .env
 .env.local
 
+/about_me.txt
+/Bohdan_Kuspys_CV_Download.html
