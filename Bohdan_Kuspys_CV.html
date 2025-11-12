@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bohdan Kuspys - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        /* --- Global Resets & Body --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* --- Main CV Container --- */
+        .container {
+            max-width: 850px;
+            margin: 2rem auto;
+            padding: 3rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* --- Header --- */
+        header {
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        /* Header two-column layout */
+        .header-row {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            align-items: start;
+            gap: 2rem;
+        }
+        .header-left { min-width: 0; }
+
+        header h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 0.25rem;
+        }
+
+        header h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            color: #555;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Sections --- */
+        section {
+            margin-bottom: 2.25rem;
+        }
+
+        /* Section Title */
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #222;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding-bottom: 0.6rem;
+            margin-bottom: 1.25rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* --- Profile --- */
+        .profile p {
+            font-size: 1.05rem;
+            color: #444;
+        }
+
+        /* --- Competencies --- */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .competencies-grid h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .competencies-grid ul {
+            list-style: none;
+        }
+
+        .competencies-grid li {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 0.25rem;
+        }
+
+        /* --- Projects --- */
+        .project-item {
+            margin-bottom: 1.25rem;
+        }
+
+        .project-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            /* color: #007bff; /* Accent color for project titles */
+            margin-bottom: 0.1rem;
+        }
+
+        .project-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* --- Experience & Education --- */
+        .item {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Clear fix for floated items */
+        .item::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .item-header {
+            margin-bottom: 0.25rem;
+        }
+        
+        .item-header h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            float: left;
+        }
+
+        .item-header .date {
+            float: right;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #777;
+            font-style: italic;
+        }
+
+        .item-subheader {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #777;
+            clear: both;
+        }
+
+        .item-content {
+            font-size: 0.95rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+
+        /* --- Volunteer --- */
+        .volunteer-list {
+            list-style: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .volunteer-list li {
+            display: inline;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .volunteer-list li + li::before {
+            content: ' | ';
+            font-weight: 400;
+            color: #888;
+            margin: 0 0.75rem;
+        }
+
+        .volunteer-summary {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        
+        /* --- Print-Specific Styles --- */
+        @media print {
+            body {
+                background-color: #ffffff;
+                font-size: 10pt; /* Standard print size */
+            }
+
+            .container {
+                margin: 0;
+                padding: 1cm 1.5cm; /* A4 margins */
+                max-width: 100%;
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            h1, h2, h3, h4, h5, h6, p, li, a {
+                color: #000 !important; /* Ensure all text is black */
+            }
+
+            header {
+                padding-bottom: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            header h1 {
+                font-size: 24pt;
+            }
+
+            header h2 {
+                font-size: 14pt;
+            }
+
+            .contact-info a {
+                text-decoration: none;
+            }
+
+            h3 {
+                font-size: 13pt;
+                padding-bottom: 0.3rem;
+                margin-bottom: 1rem;
+            }
+
+            .competencies-grid {
+                gap: 1rem;
+            }
+
+            section {
+                margin-bottom: 1.5rem;
+                page-break-inside: avoid; /* Try to keep sections together */
+            }
+
+            .item {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* --- Mobile layout adjustments for header --- */
+        @media (max-width: 768px) {
+            .header-row {
+                grid-template-columns: 1fr !important; /* override inline grid columns */
+                align-items: start !important;
+                gap: 1rem;
+            }
+            .contact-info {
+                text-align: left;
+                white-space: normal;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- === HEADER === -->
+        <header>
+            <div style="display: flex; align-items: center; gap: 2rem; justify-content: space-between;">
+                <h1 style="margin: 0;">Bohdan Kuspys</h1>
+
+            </div>
+            <div class="header-row" style="display: grid; grid-template-columns: 1fr 360px; overflow: hidden; align-items: center; gap: 2rem; justify-content: space-between;">
+                <div class="header-left">
+                    <h2>AI & Creative Technologist,<br>Automation & Workflow Specialist</h2>
+                    <div>Antwerp, Belgium</div>
+                </div>
+                <div class="contact-info">
+                    <p style="font-weight: 600;">Contact:</p>
+                    <p>Email: <a href="mailto:bohdankuspys@gmail.com" target="_blank" rel="noopener noreferrer">bohdankuspys@gmail.com</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/bohdan-kuspys/" target="_blank" rel="noopener noreferrer">linkedin.com/in/bohdan-kuspys</a></p>
+                    <p>Portfolio: <a href="https://kuspys.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">kuspys.github.io/Portfolio</a></p>
+                    <p>Phone: <a href="tel:+32476098940" target="_blank" rel="noopener noreferrer">+32476098940</a></p>
+                    <p>PDF: <a href="Bohdan_Kuspys_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a></p>
+                </div>
+            </div>
+        </header>
+
+        
+        <main>
+
+
+            <!-- === PROFESSIONAL PROFILE === -->
+            <section class="profile">
+                <h3>Professional Profile</h3>
+                <p>
+                    A hands-on AI tinkerer and pragmatic problem-solver passionate about building and deploying tools to automate workflows and solve real-world business problems. Proven ability to independently research, build, and deploy full-stack AI applications, automation pipelines (N8N), and AI-assisted hardware prototypes (ESP32), demonstrating a "tool smith" mindset that aligns with business and operational goals.
+                </p>
+            </section>
+
+            <!-- === CORE COMPETENCIES === -->
+            <section class="competencies">
+                <h3>Core Competencies</h3>
+                <div class="competencies-grid">
+                    <div>
+                        <h4>AI & Automation</h4>
+                        <ul>
+                            <li>LLM Prompt Engineering</li>
+                            <li>AI Workflows (N8N)</li>
+                            <li>API Integration</li>
+                            <li>AI-Assisted Debugging (Gemini, Cursor)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Development</h4>
+                        <ul>
+                            <li>Full-Stack Application (MVP)</li>
+                            <li>Embedded Systems (ESP32, C/C++)</li>
+                            <li>JavaScript</li>
+                            <li>DigitalOcean Deployment</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Data & Research</h4>
+                        <ul>
+                            <li>Sociology Data Analytics</li>
+                            <li>Sociology Research Development</li>
+                            <li>Market Research</li>
+                            <li>Business Analysis</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Project Management</h4>
+                        <ul>
+                            <li>Project Lifecycle Management</li>
+                            <li>Brand Strategy</li>
+                            <li>Technical Customer Support</li>
+                            <li>Troubleshooting</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- === KEY AI & AUTOMATION PROJECTS === -->
+            <section class="projects">
+                <h3>Key AI & Automation Projects</h3>
+                <div class="project-item">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <h4>N8N Automation for Canvas File Downloads</h4>
+                        <span class="date" style="font-size: 0.9rem; font-weight: 500; color: #777; font-style: italic;">Oct 2025</span>
+                    </div>
+                    <p>Developed an N8N workflow to automate the manual download of university files from the Canvas platform. The script accesses class endpoints and downloads all files, saving time and eliminating a repetitive task.</p>
+                </div>
+                <div class="project-item">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <h4>GPT Wrapper (MVP)</h4>
+                        <span class="date" style="font-size: 0.9rem; font-weight: 500; color: #777; font-style: italic;">Apr - May 2024</span>
+                    </div>
+                    <p>Built and deployed a full-stack application to help users write empathetic biographies. Focused on sophisticated system prompt engineering for early LLM APIs (GPT-3/4) to control a creative and supportive tone.</p>
+                </div>
+                <div class="project-item">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <h4>AI Workflow for Interview Content Extraction</h4>
+                        <span class="date" style="font-size: 0.9rem; font-weight: 500; color: #777; font-style: italic;">Oct 2024</span>
+                    </div>
+                    <p>Created a content analysis pipeline to process long-form video interviews. Utilized OpenAI Whisper for transcription and multiple LLMs (Gemini, ChatGPT, Claude) with specific prompts to identify and extract commercially viable clips, saving hours of manual review.</p>
+                </div>
+                <div class="project-item">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <h4>Smart Speaker (ESP32)</h4>
+                        <span class="date" style="font-size: 0.9rem; font-weight: 500; color: #777; font-style: italic;">Mar - May 2025</span>
+                    </div>
+                    <p>Engineered a smart speaker with a touchscreen display using an ESP32. Integrated multiple hardware components and used AI-assisted debugging (Gemini, Cursor) to resolve complex embedded system issues like memory limitations and core panics.</p>
+                </div>
+
+            </section>
+
+            <!-- === PROFESSIONAL EXPERIENCE === -->
+            <section class="experience">
+                <h3>Professional Experience</h3>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <h4>Videographer & Video Editor</h4>
+                        <span class="date">Sep 2024 - Oct 2024; Sep 2025 - Oct 2025;</span>
+                    </div>
+                    <div class="item-subheader">Skaņu Mežs | Riga, Latvia</div>
+                    <div class="item-content">
+                        <p>Managed the full production lifecycle for over five events and eight interviews. Mastered large-volume file organization and post-production workflows in Adobe Premiere Pro.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h4>Brand Strategy & Creative Lead (Intern)</h4>
+                        <span class="date">Mar 2025 - Apr 2025</span>
+                    </div>
+                    <div class="item-subheader">Proakatemia | Tampere, Finland</div>
+                    <div class="item-content">
+                        <p>Executed a complete brand strategy and guidelines overhaul. Designed market research, defined B2B/B2C positioning, and delivered a new visual identity and website redesign.</p>
+                    </div>
+                </div>
+
+                
+
+                <div class="item">
+                    <div class="item-header">
+                        <h4>Customer Support Representative</h4>
+                        <span class="date">Aug 2020 - Dec 2021</span>
+                    </div>
+                    <div class="item-subheader">Namecheap, Inc | Lviv, Ukraine</div>
+                    <div class="item-content">
+                        <p>Managed customer requests for domain name and account management. Troubleshot and resolved technical issues, enhancing customer satisfaction.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h4>Sociology Data Analyst (Intern)</h4>
+                        <span class="date">May 2019 - Jun 2019</span>
+                    </div>
+                    <div class="item-subheader">City Institute, Lviv City Administration | Lviv, Ukraine</div>
+                    <div class="item-content">
+                        <p>Conducted sociology data analytics to support municipal projects and research.</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- === VOLUNTEER & NGO EXPERIENCE === -->
+            <section class="volunteer">
+                <h3>Volunteer & NGO Experience</h3>
+                <ul class="volunteer-list">
+                    <li>U-Report (May 2019 - Jul 2019)</li>
+                    <li>Державотворець (Jun 2018)</li>
+                    <li>Український Молодіжний прорив (2017 - 2018)</li>
+                </ul>
+                <p class="volunteer-summary">
+                    Contributed to sociology research development and project management initiatives across various youth and civic engagement programs.
+                </p>
+            </section>
+
+            <!-- === EDUCATION === -->
+            <section class="education">
+                <h3>Education</h3>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <h4>Bachelor's degree, Multimedia & Creative Technologies</h4>
+                        <span class="date">2023 - 2026</span>
+                    </div>
+                    <div class="item-subheader">Karel de Grote Hogeschool</div>
+                </div>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <h4>Bachelor of Social sciences, Communication Studies</h4>
+                        <span class="date">2022 - 2025</span>
+                    </div>
+                    <div class="item-subheader">Vrije Universiteit Brussel</div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h4>Sociology</h4>
+                        <span class="date">2018 - 2021</span>
+                    </div>
+                    <div class="item-subheader">Lviv Polytechnic National University</div>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
